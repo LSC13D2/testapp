@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- stable
+cache:
+  directories:
+  - node_modules
+script:
+# - npm test //on écrit des bons tests car si il y a une erreur on ne deploit pas
+- npm run build
+deploy:
+  on:
+    branch: master
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  bucket: $AWS_BUCKET_NAME
+  local_dir: build # on deploit le build local donc pensez a npm run build avant de push ou alors creer un script before_deploy: 
+  acl: public_read # on met les bonnes autorisations sur les fichiers uploadé

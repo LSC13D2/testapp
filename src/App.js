@@ -10,7 +10,7 @@ function App() {
 		autoplay: true,
 		controls: true,
 		sources: [{
-			src: 'https://e087512ad0c32643.mediapackage.eu-west-1.amazonaws.com/out/v1/0482f99c52db43e2a55ddb756b935c43/index.m3u8',
+			src: 'https://18cd60dea8190528.mediapackage.eu-west-3.amazonaws.com/out/v1/0cd12362f7264a4ba34e45169ecf8c05/index.m3u8',
 			type: 'application/x-mpegURL'
 		}]
 	};
